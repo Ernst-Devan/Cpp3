@@ -46,7 +46,7 @@ FragTrap::~FragTrap()
 
 void    FragTrap::attack(const std::string& target)
 {
- if (this->_hit == 0 || this->_energy == 0)
+ if (can_do())
         return;
     this->_energy--;
     std::cout << "ScavTrap "<< this->_name << " attack " << target << ", causing " << this->_damage << " points of damage!" << std::endl;
@@ -55,7 +55,5 @@ void    FragTrap::attack(const std::string& target)
 
 void    FragTrap::highFivesGuys(void)
 {
-    if (this->_hit <= 0 || this->_energy <= 0)
-        return;
     std::cout << "Heyy guys stop the war ! Go make a high fives all together" << std::endl;
 }

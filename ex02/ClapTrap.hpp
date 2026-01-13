@@ -1,16 +1,16 @@
-#ifndef _ClapTrap_hpp
-#define _ClapTrap_hpp
+#ifndef _CLAPTRAP_HPP
+#define _CLAPTRAP_HPP
 
 #include <iostream>
 
-class ClapTrap
+class ClapTrap 
 {
     public:
         ClapTrap();
         ClapTrap(const std::string &name);
         ClapTrap(const ClapTrap &c);
         ClapTrap &operator=(const ClapTrap &c);
-        ~ClapTrap();
+        virtual ~ClapTrap();
 
         std::string     getName() const;
         int             getHit() const;
@@ -18,6 +18,7 @@ class ClapTrap
         int             getDamage() const;
 
         virtual void    attack(const std::string& target);
+        int             can_do(void) const;
         
         void            takeDamage(unsigned int amout);
         void            beRepaired(unsigned int amout);

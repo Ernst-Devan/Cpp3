@@ -1,9 +1,10 @@
-#ifndef _ClapTrap_hpp
-#define _ClapTrap_hpp
+#ifndef _CLAPTRAP_HPP
+#define _CLAPTRAP_HPP
 
 #include <iostream>
 
-class ClapTrap {
+class ClapTrap 
+{
     public:
         ClapTrap();
         ClapTrap(const std::string &name);
@@ -17,6 +18,7 @@ class ClapTrap {
         int         getDamage() const;
 
         void        attack(const std::string& target);
+        int         can_do(void) const;
         
         void        takeDamage(unsigned int amout);
         void        beRepaired(unsigned int amout);

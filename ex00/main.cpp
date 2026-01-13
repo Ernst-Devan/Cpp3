@@ -10,8 +10,11 @@ int main(void)
     c = b;
 
     a.attack("Arthuro");
-    b.takeDamage(5);
-    b.beRepaired(2);
+    b.takeDamage(0);
+    b.attack("Bernadette");
+    a.takeDamage(54);
+    a.attack("Arthuro");
+    b.beRepaired(1);
     d.attack("UNIVERSE");
     return (0);
 }
